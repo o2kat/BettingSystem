@@ -1,0 +1,410 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|c:\\users\\o2kat\\onedrive\\3 \u043A\u0443\u0440\u0441\\\u0440\u043F\u043C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\bettingsystemapp\\bettingsystemapp\\directorwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|solutionrelative:bettingsystemapp\\directorwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|c:\\users\\o2kat\\onedrive\\3 \u043A\u0443\u0440\u0441\\\u0440\u043F\u043C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\bettingsystemapp\\bettingsystemapp\\directorwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|solutionrelative:bettingsystemapp\\directorwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|c:\\users\\o2kat\\onedrive\\3 \u043A\u0443\u0440\u0441\\\u0440\u043F\u043C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\bettingsystemapp\\bettingsystemapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|solutionrelative:bettingsystemapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|c:\\users\\o2kat\\onedrive\\3 \u043A\u0443\u0440\u0441\\\u0440\u043F\u043C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\bettingsystemapp\\bettingsystemapp\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|solutionrelative:bettingsystemapp\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|c:\\users\\o2kat\\onedrive\\3 \u043A\u0443\u0440\u0441\\\u0440\u043F\u043C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\bettingsystemapp\\bettingsystemapp\\adminwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|solutionrelative:bettingsystemapp\\adminwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|c:\\users\\o2kat\\onedrive\\3 \u043A\u0443\u0440\u0441\\\u0440\u043F\u043C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\bettingsystemapp\\bettingsystemapp\\registrationwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|solutionrelative:bettingsystemapp\\registrationwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|c:\\users\\o2kat\\onedrive\\3 \u043A\u0443\u0440\u0441\\\u0440\u043F\u043C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\bettingsystemapp\\bettingsystemapp\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|solutionrelative:bettingsystemapp\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|c:\\users\\o2kat\\onedrive\\3 \u043A\u0443\u0440\u0441\\\u0440\u043F\u043C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\bettingsystemapp\\bettingsystemapp\\editorwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|solutionrelative:bettingsystemapp\\editorwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|c:\\users\\o2kat\\onedrive\\3 \u043A\u0443\u0440\u0441\\\u0440\u043F\u043C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\bettingsystemapp\\bettingsystemapp\\editeventwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|solutionrelative:bettingsystemapp\\editeventwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|c:\\users\\o2kat\\onedrive\\3 \u043A\u0443\u0440\u0441\\\u0440\u043F\u043C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\bettingsystemapp\\bettingsystemapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|solutionrelative:bettingsystemapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|c:\\users\\o2kat\\onedrive\\3 \u043A\u0443\u0440\u0441\\\u0440\u043F\u043C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\bettingsystemapp\\bettingsystemapp\\addeventwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|solutionrelative:bettingsystemapp\\addeventwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|c:\\users\\o2kat\\onedrive\\3 \u043A\u0443\u0440\u0441\\\u0440\u043F\u043C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\bettingsystemapp\\bettingsystemapp\\bettingcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|solutionrelative:bettingsystemapp\\bettingcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|c:\\users\\o2kat\\onedrive\\3 \u043A\u0443\u0440\u0441\\\u0440\u043F\u043C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\bettingsystemapp\\bettingsystemapp\\registrationwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|solutionrelative:bettingsystemapp\\registrationwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|c:\\users\\o2kat\\onedrive\\3 \u043A\u0443\u0440\u0441\\\u0440\u043F\u043C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\bettingsystemapp\\bettingsystemapp\\addeventwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|solutionrelative:bettingsystemapp\\addeventwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|c:\\users\\o2kat\\onedrive\\3 \u043A\u0443\u0440\u0441\\\u0440\u043F\u043C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\bettingsystemapp\\bettingsystemapp\\editeventwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|solutionrelative:bettingsystemapp\\editeventwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|c:\\users\\o2kat\\onedrive\\3 \u043A\u0443\u0440\u0441\\\u0440\u043F\u043C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\bettingsystemapp\\bettingsystemapp\\editorwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|solutionrelative:bettingsystemapp\\editorwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|c:\\users\\o2kat\\onedrive\\3 \u043A\u0443\u0440\u0441\\\u0440\u043F\u043C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\bettingsystemapp\\bettingsystemapp\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|solutionrelative:bettingsystemapp\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|c:\\users\\o2kat\\onedrive\\3 \u043A\u0443\u0440\u0441\\\u0440\u043F\u043C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\bettingsystemapp\\bettingsystemapp\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|solutionrelative:bettingsystemapp\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|c:\\users\\o2kat\\onedrive\\3 \u043A\u0443\u0440\u0441\\\u0440\u043F\u043C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\bettingsystemapp\\bettingsystemapp\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|solutionrelative:bettingsystemapp\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\bettingsystemapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|solutionrelative:bettingsystemapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|c:\\users\\o2kat\\onedrive\\3 \u043A\u0443\u0440\u0441\\\u0440\u043F\u043C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\bettingsystemapp\\bettingsystemapp\\models\\journal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|solutionrelative:bettingsystemapp\\models\\journal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|c:\\users\\o2kat\\onedrive\\3 \u043A\u0443\u0440\u0441\\\u0440\u043F\u043C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\bettingsystemapp\\bettingsystemapp\\models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|solutionrelative:bettingsystemapp\\models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|c:\\users\\o2kat\\onedrive\\3 \u043A\u0443\u0440\u0441\\\u0440\u043F\u043C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\bettingsystemapp\\bettingsystemapp\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31CF8912-C502-4A8D-8185-94F188FC5390}|BettingSystemApp\\BettingSystemApp.csproj|solutionrelative:bettingsystemapp\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "BettingSystemApp\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\MainWindow.xaml",
+              "RelativeToolTip": "BettingSystemApp\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-29T13:29:18.192Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RegistrationWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\RegistrationWindow.xaml",
+              "RelativeDocumentMoniker": "BettingSystemApp\\RegistrationWindow.xaml",
+              "ToolTip": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\RegistrationWindow.xaml",
+              "RelativeToolTip": "BettingSystemApp\\RegistrationWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-29T13:32:18.471Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AddEventWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\AddEventWindow.xaml",
+              "RelativeDocumentMoniker": "BettingSystemApp\\AddEventWindow.xaml",
+              "ToolTip": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\AddEventWindow.xaml",
+              "RelativeToolTip": "BettingSystemApp\\AddEventWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-29T13:33:15.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AdminWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\AdminWindow.xaml.cs",
+              "RelativeDocumentMoniker": "BettingSystemApp\\AdminWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\AdminWindow.xaml.cs",
+              "RelativeToolTip": "BettingSystemApp\\AdminWindow.xaml.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAADgvz4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T13:43:54.075Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EditEventWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\EditEventWindow.xaml",
+              "RelativeDocumentMoniker": "BettingSystemApp\\EditEventWindow.xaml",
+              "ToolTip": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\EditEventWindow.xaml",
+              "RelativeToolTip": "BettingSystemApp\\EditEventWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-29T13:33:29.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AdminWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\AdminWindow.xaml",
+              "RelativeDocumentMoniker": "BettingSystemApp\\AdminWindow.xaml",
+              "ToolTip": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\AdminWindow.xaml",
+              "RelativeToolTip": "BettingSystemApp\\AdminWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-29T13:32:33.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DirectorWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\DirectorWindow.xaml",
+              "RelativeDocumentMoniker": "BettingSystemApp\\DirectorWindow.xaml",
+              "ToolTip": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\DirectorWindow.xaml",
+              "RelativeToolTip": "BettingSystemApp\\DirectorWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-29T13:32:45.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DirectorWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\DirectorWindow.xaml.cs",
+              "RelativeDocumentMoniker": "BettingSystemApp\\DirectorWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\DirectorWindow.xaml.cs",
+              "RelativeToolTip": "BettingSystemApp\\DirectorWindow.xaml.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAAAGAAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T13:44:11.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LoginWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\LoginWindow.xaml",
+              "RelativeDocumentMoniker": "BettingSystemApp\\LoginWindow.xaml",
+              "ToolTip": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\LoginWindow.xaml",
+              "RelativeToolTip": "BettingSystemApp\\LoginWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-29T13:32:07.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EditorWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\EditorWindow.xaml",
+              "RelativeDocumentMoniker": "BettingSystemApp\\EditorWindow.xaml",
+              "ToolTip": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\EditorWindow.xaml",
+              "RelativeToolTip": "BettingSystemApp\\EditorWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-29T13:32:59.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\App.xaml",
+              "RelativeDocumentMoniker": "BettingSystemApp\\App.xaml",
+              "ToolTip": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\App.xaml",
+              "RelativeToolTip": "BettingSystemApp\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-29T13:47:48.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "BettingContext.cs",
+              "DocumentMoniker": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\BettingContext.cs",
+              "RelativeDocumentMoniker": "BettingSystemApp\\BettingContext.cs",
+              "ToolTip": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\BettingContext.cs",
+              "RelativeToolTip": "BettingSystemApp\\BettingContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T13:31:47.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "RegistrationWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\RegistrationWindow.xaml.cs",
+              "RelativeDocumentMoniker": "BettingSystemApp\\RegistrationWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\RegistrationWindow.xaml.cs",
+              "RelativeToolTip": "BettingSystemApp\\RegistrationWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T13:41:42.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AddEventWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\AddEventWindow.xaml.cs",
+              "RelativeDocumentMoniker": "BettingSystemApp\\AddEventWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\AddEventWindow.xaml.cs",
+              "RelativeToolTip": "BettingSystemApp\\AddEventWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T13:46:13.84Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "EditEventWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\EditEventWindow.xaml.cs",
+              "RelativeDocumentMoniker": "BettingSystemApp\\EditEventWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\EditEventWindow.xaml.cs",
+              "RelativeToolTip": "BettingSystemApp\\EditEventWindow.xaml.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAAAD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T13:47:23.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "EditorWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\EditorWindow.xaml.cs",
+              "RelativeDocumentMoniker": "BettingSystemApp\\EditorWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\EditorWindow.xaml.cs",
+              "RelativeToolTip": "BettingSystemApp\\EditorWindow.xaml.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAAAGwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T13:44:28.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "LoginWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\LoginWindow.xaml.cs",
+              "RelativeDocumentMoniker": "BettingSystemApp\\LoginWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\LoginWindow.xaml.cs",
+              "RelativeToolTip": "BettingSystemApp\\LoginWindow.xaml.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAiwEoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T13:41:29.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\Models\\User.cs",
+              "RelativeDocumentMoniker": "BettingSystemApp\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\Models\\User.cs",
+              "RelativeToolTip": "BettingSystemApp\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T13:30:45.602Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\App.config",
+              "RelativeDocumentMoniker": "BettingSystemApp\\App.config",
+              "ToolTip": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\App.config",
+              "RelativeToolTip": "BettingSystemApp\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-04-29T13:48:38.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "BettingSystemApp\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\MainWindow.xaml.cs",
+              "RelativeToolTip": "BettingSystemApp\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvw0AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T13:29:17.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Journal.cs",
+              "DocumentMoniker": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\Models\\Journal.cs",
+              "RelativeDocumentMoniker": "BettingSystemApp\\Models\\Journal.cs",
+              "ToolTip": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\Models\\Journal.cs",
+              "RelativeToolTip": "BettingSystemApp\\Models\\Journal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T13:31:28.354Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Event.cs",
+              "DocumentMoniker": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\Models\\Event.cs",
+              "RelativeDocumentMoniker": "BettingSystemApp\\Models\\Event.cs",
+              "ToolTip": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\Models\\Event.cs",
+              "RelativeToolTip": "BettingSystemApp\\Models\\Event.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T13:31:14.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Role.cs",
+              "DocumentMoniker": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\Models\\Role.cs",
+              "RelativeDocumentMoniker": "BettingSystemApp\\Models\\Role.cs",
+              "ToolTip": "C:\\Users\\o2kat\\OneDrive\\3 \u043A\u0443\u0440\u0441\\\u0420\u041F\u041C\\\u0434\u0435\u0441\u043A\u0442\u043E\u043F\\BettingSystemApp\\BettingSystemApp\\Models\\Role.cs",
+              "RelativeToolTip": "BettingSystemApp\\Models\\Role.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T13:31:01.733Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
