@@ -1,4 +1,0 @@
-EventID,EventName,EventDate
-35,Team Spirit vs Navi (Major 2025),2025-04-19
-36,IM MZLF vs CMH,2025-02-02
-40,Тестовое событие (Прошло),2024-12-31

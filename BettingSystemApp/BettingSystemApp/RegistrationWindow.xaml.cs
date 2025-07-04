@@ -30,25 +30,42 @@ namespace BettingSystemApp
         // Метод регистрации пользователя
         private void RegisterUser()
         {
-            DateTime currentDate = DateTime.Now;
-
-            // Проверка границ datetime для SQL Server
-            if (currentDate < new DateTime(1753, 1, 1))
-                currentDate = new DateTime(1753, 1, 1);
-            if (currentDate > new DateTime(9999, 12, 31))
-                currentDate = new DateTime(9999, 12, 31);
-
-            var newUser = new User
-            {
-                Username = UsernameTextBox.Text,
-                PasswordHash = HashPassword(PasswordBox.Password),
-                Email = EmailTextBox.Text,
-                RoleID = (int)RoleComboBox.SelectedValue,
-                CreatedDate = currentDate
-            };
-
+            // Проверка уникальности username и email
             using (var context = new BettingContext())
             {
+                // Проверка на существующий username
+                if (context.Users.Any(u => u.Username.ToLower() == UsernameTextBox.Text.ToLower()))
+                {
+                    MessageBox.Show("Пользователь с таким именем уже существует. Выберите другое имя пользователя.");
+                    return;
+                }
+
+                // Проверка на существующий email
+                if (context.Users.Any(u => u.Email.ToLower() == EmailTextBox.Text.ToLower()))
+                {
+                    MessageBox.Show("Пользователь с таким email уже существует. Используйте другой email.");
+                    return;
+                }
+
+                DateTime currentDate = DateTime.Now;
+
+                // Проверка границ datetime для SQL Server
+                if (currentDate < new DateTime(1753, 1, 1))
+                    currentDate = new DateTime(1753, 1, 1);
+                if (currentDate > new DateTime(9999, 12, 31))
+                    currentDate = new DateTime(9999, 12, 31);
+
+                var newUser = new User
+                {
+                    Username = UsernameTextBox.Text.Trim(),
+                    PasswordHash = HashPassword(PasswordBox.Password),
+                    Email = EmailTextBox.Text.Trim(),
+                    RoleID = (int)RoleComboBox.SelectedValue,
+                    CreatedDate = currentDate,
+                    Balance = 0.00m, // Начальный баланс
+                    BetsCount = 0    // Начальное количество ставок
+                };
+
                 context.Users.Add(newUser);
                 context.SaveChanges();
             }
@@ -75,12 +92,34 @@ namespace BettingSystemApp
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrEmpty(UsernameTextBox.Text) ||
-                string.IsNullOrEmpty(PasswordBox.Password) ||
-                string.IsNullOrEmpty(EmailTextBox.Text) ||
+            // Базовая валидация
+            if (string.IsNullOrWhiteSpace(UsernameTextBox.Text) ||
+                string.IsNullOrWhiteSpace(PasswordBox.Password) ||
+                string.IsNullOrWhiteSpace(EmailTextBox.Text) ||
                 RoleComboBox.SelectedValue == null)
             {
                 MessageBox.Show("Пожалуйста, заполните все поля и выберите роль.");
+                return;
+            }
+
+            // Валидация длины username
+            if (UsernameTextBox.Text.Trim().Length < 3)
+            {
+                MessageBox.Show("Имя пользователя должно содержать минимум 3 символа.");
+                return;
+            }
+
+            // Валидация длины пароля
+            if (PasswordBox.Password.Length < 6)
+            {
+                MessageBox.Show("Пароль должен содержать минимум 6 символов.");
+                return;
+            }
+
+            // Простая валидация email
+            if (!EmailTextBox.Text.Contains("@") || !EmailTextBox.Text.Contains("."))
+            {
+                MessageBox.Show("Пожалуйста, введите корректный email адрес.");
                 return;
             }
 

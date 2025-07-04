@@ -20,22 +20,20 @@ namespace BettingSystemApp
                 string.IsNullOrWhiteSpace(SportTextBox.Text) ||
                 string.IsNullOrWhiteSpace(DescriptionTextBox.Text) ||
                 string.IsNullOrWhiteSpace(Team1WinTextBox.Text) ||
-                string.IsNullOrWhiteSpace(Team2WinTextBox.Text) ||
-                string.IsNullOrWhiteSpace(DrawTextBox.Text))
+                string.IsNullOrWhiteSpace(Team2WinTextBox.Text))
             {
                 MessageBox.Show("Пожалуйста, заполните все поля.");
                 return;
             }
 
             if (!decimal.TryParse(Team1WinTextBox.Text, out decimal team1Win) ||
-                !decimal.TryParse(Team2WinTextBox.Text, out decimal team2Win) ||
-                !decimal.TryParse(DrawTextBox.Text, out decimal draw))
+                !decimal.TryParse(Team2WinTextBox.Text, out decimal team2Win))
             {
                 MessageBox.Show("Пожалуйста, введите корректные коэффициенты.");
                 return;
             }
 
-            if (team1Win <= 0 || team2Win <= 0 || draw <= 0)
+            if (team1Win <= 0 || team2Win <= 0)
             {
                 MessageBox.Show("Коэффициенты должны быть больше нуля.");
                 return;
@@ -50,7 +48,8 @@ namespace BettingSystemApp
                 Description = DescriptionTextBox.Text.Trim(),
                 Team1Win = team1Win,
                 Team2Win = team2Win,
-                Draw = draw
+                Draw = string.IsNullOrWhiteSpace(DrawTextBox.Text) ? null : 
+                       (decimal.TryParse(DrawTextBox.Text, out decimal draw) ? draw : (decimal?)null)
             };
 
             using (var context = new BettingContext())

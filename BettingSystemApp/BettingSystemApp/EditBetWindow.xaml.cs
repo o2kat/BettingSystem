@@ -24,7 +24,7 @@ namespace BettingSystemApp
             DescriptionTextBox.Text = _bet.Description;
             Team1WinTextBox.Text = _bet.Team1Win.ToString("F2");
             Team2WinTextBox.Text = _bet.Team2Win.ToString("F2");
-            DrawTextBox.Text = _bet.Draw.ToString("F2");
+            DrawTextBox.Text = _bet.Draw.HasValue ? _bet.Draw.Value.ToString("F2") : "";
         }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
@@ -35,22 +35,20 @@ namespace BettingSystemApp
                 string.IsNullOrWhiteSpace(SportTextBox.Text) ||
                 string.IsNullOrWhiteSpace(DescriptionTextBox.Text) ||
                 string.IsNullOrWhiteSpace(Team1WinTextBox.Text) ||
-                string.IsNullOrWhiteSpace(Team2WinTextBox.Text) ||
-                string.IsNullOrWhiteSpace(DrawTextBox.Text))
+                string.IsNullOrWhiteSpace(Team2WinTextBox.Text))
             {
                 MessageBox.Show("Пожалуйста, заполните все поля.");
                 return;
             }
 
             if (!decimal.TryParse(Team1WinTextBox.Text, out decimal team1Win) ||
-                !decimal.TryParse(Team2WinTextBox.Text, out decimal team2Win) ||
-                !decimal.TryParse(DrawTextBox.Text, out decimal draw))
+                !decimal.TryParse(Team2WinTextBox.Text, out decimal team2Win))
             {
                 MessageBox.Show("Пожалуйста, введите корректные коэффициенты.");
                 return;
             }
 
-            if (team1Win <= 0 || team2Win <= 0 || draw <= 0)
+            if (team1Win <= 0 || team2Win <= 0)
             {
                 MessageBox.Show("Коэффициенты должны быть больше нуля.");
                 return;
@@ -68,7 +66,15 @@ namespace BettingSystemApp
                     betToUpdate.Description = DescriptionTextBox.Text.Trim();
                     betToUpdate.Team1Win = team1Win;
                     betToUpdate.Team2Win = team2Win;
-                    betToUpdate.Draw = draw;
+                    // Обработка поля Draw (может быть NULL)
+                    if (string.IsNullOrWhiteSpace(DrawTextBox.Text))
+                    {
+                        betToUpdate.Draw = null;
+                    }
+                    else if (decimal.TryParse(DrawTextBox.Text, out decimal draw))
+                    {
+                        betToUpdate.Draw = draw;
+                    }
 
                     context.SaveChanges();
                     MessageBox.Show("Ставка успешно обновлена.");

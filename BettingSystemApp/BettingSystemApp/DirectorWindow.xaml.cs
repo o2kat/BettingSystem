@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.Entity;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -40,12 +41,15 @@ namespace BettingSystemApp
                 UserBetsDataGrid.ItemsSource = context.UserBets
                     .Include("User")
                     .Include("Bet")
+                    .ToList()
                     .Select(ub => new
                     {
                         ub.UserBetID,
                         User = ub.User.Username,
-                        Match = $"{ub.Bet.Team1} vs {ub.Bet.Team2}",
+                        Match = string.Format("{0} vs {1}", ub.Bet.Team1, ub.Bet.Team2),
                         ub.Amount,
+                        ub.Coefficient,
+                        ub.TeamWin,
                         ub.DatePlaced,
                         ub.Status
                     }).ToList();
@@ -94,7 +98,10 @@ namespace BettingSystemApp
                 userReport.AppendLine("ID\tЛогин\tEmail\tРоль\tБаланс\tКоличество ставок\tДата создания");
                 foreach (var user in users)
                 {
-                    userReport.AppendLine($"{user.UserID}\t{user.Username}\t{user.Email}\t{user.Role?.RoleName ?? "Не назначена"}\t{user.Balance:F2}\t{user.BetsCount}\t{user.CreatedDate:yyyy-MM-dd}");
+                    userReport.AppendLine(string.Format("{0}\t{1}\t{2}\t{3}\t{4:F2}\t{5}\t{6}", 
+                        user.UserID, user.Username, user.Email, 
+                        user.Role?.RoleName ?? "Не назначена", user.Balance, user.BetsCount ?? 0, 
+                        user.CreatedDate.ToString("yyyy-MM-dd")));
                 }
                 File.WriteAllText(userReportPath, userReport.ToString());
 
@@ -105,7 +112,9 @@ namespace BettingSystemApp
                 betReport.AppendLine("ID\tКоманда 1\tКоманда 2\tВремя матча\tСпорт\tОписание\tК1\tК2\tКX");
                 foreach (var bet in bets)
                 {
-                    betReport.AppendLine($"{bet.BetID}\t{bet.Team1}\t{bet.Team2}\t{bet.MatchTime:yyyy-MM-dd HH:mm}\t{bet.Sport}\t{bet.Description}\t{bet.Team1Win:F2}\t{bet.Team2Win:F2}\t{bet.Draw:F2}");
+                    betReport.AppendLine(string.Format("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6:F2}\t{7:F2}\t{8}", 
+                        bet.BetID, bet.Team1, bet.Team2, bet.MatchTime.ToString("yyyy-MM-dd HH:mm"), 
+                        bet.Sport, bet.Description, bet.Team1Win, bet.Team2Win, bet.Draw.HasValue ? bet.Draw.Value.ToString("F2") : "N/A"));
                 }
                 File.WriteAllText(betReportPath, betReport.ToString());
 
@@ -113,10 +122,12 @@ namespace BettingSystemApp
                 var userBets = context.UserBets.Include("User").Include("Bet").ToList();
                 var userBetReport = new StringBuilder();
                 userBetReport.AppendLine("ОТЧЁТ О СТАВКАХ ПОЛЬЗОВАТЕЛЕЙ");
-                userBetReport.AppendLine("ID\tПользователь\tМатч\tСумма\tДата ставки\tСтатус");
+                userBetReport.AppendLine("ID\tПользователь\tМатч\tСумма\tКоэффициент\tКоманда\tДата ставки\tСтатус");
                 foreach (var ub in userBets)
                 {
-                    userBetReport.AppendLine($"{ub.UserBetID}\t{ub.User.Username}\t{ub.Bet.Team1} vs {ub.Bet.Team2}\t{ub.Amount:F2}\t{ub.DatePlaced:yyyy-MM-dd HH:mm}\t{ub.Status}");
+                    userBetReport.AppendLine(string.Format("{0}\t{1}\t{2} vs {3}\t{4:F2}\t{5:F2}\t{6}\t{7}\t{8}", 
+                        ub.UserBetID, ub.User.Username, ub.Bet.Team1, ub.Bet.Team2, 
+                        ub.Amount, ub.Coefficient, ub.TeamWin, ub.DatePlaced.ToString("yyyy-MM-dd HH:mm"), ub.Status));
                 }
                 File.WriteAllText(userBetReportPath, userBetReport.ToString());
 
@@ -125,7 +136,10 @@ namespace BettingSystemApp
                 csvReport.AppendLine("UserID,Username,Email,Role,Balance,BetsCount,CreatedDate");
                 foreach (var user in users)
                 {
-                    csvReport.AppendLine($"{user.UserID},{user.Username},{user.Email},{user.Role?.RoleName ?? "Не назначена"},{user.Balance:F2},{user.BetsCount},{user.CreatedDate:yyyy-MM-dd}");
+                    csvReport.AppendLine(string.Format("{0},{1},{2},{3},{4:F2},{5},{6}", 
+                        user.UserID, user.Username, user.Email, 
+                        user.Role?.RoleName ?? "Не назначена", user.Balance, user.BetsCount ?? 0, 
+                        user.CreatedDate.ToString("yyyy-MM-dd")));
                 }
                 File.WriteAllText(directorUserReportPath, csvReport.ToString());
             }
@@ -158,7 +172,7 @@ namespace BettingSystemApp
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при открытии отчётов:\n{ex.Message}");
+                MessageBox.Show(string.Format("Ошибка при открытии отчётов:\n{0}", ex.Message));
             }
         }
 

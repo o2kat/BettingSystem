@@ -38,6 +38,14 @@ namespace BettingSystemApp
                 .HasPrecision(10, 2);
 
             modelBuilder.Entity<UserBet>()
+                .Property(ub => ub.Coefficient)
+                .HasPrecision(5, 2);
+
+            modelBuilder.Entity<UserBet>()
+                .Property(ub => ub.TeamWin)
+                .HasMaxLength(50);
+
+            modelBuilder.Entity<UserBet>()
                 .Property(ub => ub.Status)
                 .HasMaxLength(20);
 

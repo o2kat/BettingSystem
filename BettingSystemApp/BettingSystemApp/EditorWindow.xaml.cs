@@ -22,6 +22,7 @@ namespace BettingSystemApp
             using (var context = new BettingContext())
             {
                 BetsListView.ItemsSource = context.Bets
+                    .ToList()
                     .Select(b => new
                     {
                         b.BetID,
@@ -31,7 +32,7 @@ namespace BettingSystemApp
                         b.Description,
                         Team1Win = $"{b.Team1Win:F2}",
                         Team2Win = $"{b.Team2Win:F2}",
-                        Draw = $"{b.Draw:F2}"
+                        Draw = b.Draw.HasValue ? $"{b.Draw.Value:F2}" : "N/A"
                     }).ToList();
             }
         }

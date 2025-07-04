@@ -43,6 +43,8 @@ CREATE TABLE UserBets (
     BetID INT NOT NULL,
     Amount DECIMAL(10,2) NOT NULL,
     DatePlaced DATETIME DEFAULT GETDATE(),
+    Coefficient DECIMAL(5,2) NOT NULL,
+    TeamWin NVARCHAR(50),
     Status NVARCHAR(20) DEFAULT 'Active', -- Active, Won, Lost
     FOREIGN KEY (UserID) REFERENCES Users(UserID),
     FOREIGN KEY (BetID) REFERENCES Bets(BetID)

@@ -1,2 +1,8 @@
-UserID,Username,Email,PasswordHash,Role
-1036,Admin,Admin@gmail.com,c1c224b03cd9bc7b6a86d77f5dace40191766c485cd55dc48caf9ac873335d6f,Admin
+UserID,Username,Email,PasswordHash,Role,Balance,BetsCount
+0,admin,admin@test.com,admin123,Admin,1000,00,0
+1,editor,editor@test.com,editor123,Editor,500,00,0
+2,director,director@test.com,director123,Director,750,00,0
+3,user1,user1@test.com,user123,User,100,00,0
+4,user2,user2@test.com,user123,User,200,00,3
+5,admin,admin@mail.ru,8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918,Admin,0,00,0
+6,editor,editor@mail.ru,1553cc62ff246044c683a61e203e65541990e7fcd4af9443d22b9557ecc9ac54,Editor,0,00,0

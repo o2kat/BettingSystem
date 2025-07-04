@@ -1,3 +1,10 @@
-UserID,Username,Email,Role
-1037,Admin,Admin@gmail.com,Admin
-1038,Director,Director@gmail.com,Director
+UserID,Username,Email,Role,Balance,BetsCount,CreatedDate
+7,admin,admin@test.com,Admin,1000,00,0,2025-07-04
+8,editor,editor@test.com,Editor,500,00,0,2025-07-04
+9,director,director@test.com,Director,750,00,0,2025-07-04
+10,user1,user1@test.com,User,100,00,0,2025-07-04
+11,user2,user2@test.com,User,200,00,0,2025-07-04
+12,admin,admin@mail.ru,Admin,0,00,0,2025-07-04
+13,editor,editor@mail.ru,Editor,0,00,0,2025-07-04
+14,admin,admin@mail.ru,Admin,0,00,0,2025-07-04
+15,director,director@mail.ru,Director,0,00,0,2025-07-04

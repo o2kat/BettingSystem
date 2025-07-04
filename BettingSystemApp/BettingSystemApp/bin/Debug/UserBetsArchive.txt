@@ -1,0 +1,1 @@
+UserBetID,UserID,Username,BetID,Team1,Team2,Amount,Coefficient,TeamWin,DatePlaced,Status

@@ -13,7 +13,7 @@ namespace BettingSystemApp.Models
         public string Description { get; set; }
         public decimal Team1Win { get; set; }
         public decimal Team2Win { get; set; }
-        public decimal Draw { get; set; }
+        public decimal? Draw { get; set; }
 
         public virtual ICollection<UserBet> UserBets { get; set; }
     }

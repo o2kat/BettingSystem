@@ -1,0 +1,2 @@
+BetID,Team1,Team2,MatchTime,Sport,Description,Team1Win,Team2Win,Draw
+6,A,B,2025-07-05 00:00,A,A,0,00,40,00,0,00

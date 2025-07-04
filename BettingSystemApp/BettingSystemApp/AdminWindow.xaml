@@ -2,7 +2,7 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MAKMERIC | Администратор" 
-        Height="800" Width="1000"
+        Height="897" Width="1000"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         Background="#FFF">
@@ -136,6 +136,16 @@
                                 Padding="8,4"
                                 FontWeight="Medium"
                                 Click="ArchiveUserBetsButton_Click"/>
+
+                        <Button Content="Разархивировать ставки пользователей" 
+                                Width="180"
+                                Margin="5"
+                                Background="#B5EAD7"
+                                Foreground="#333"
+                                BorderThickness="0"
+                                Padding="8,4"
+                                FontWeight="Medium"
+                                Click="UnarchiveUserBetsButton_Click"/>
                     </UniformGrid>
                 </StackPanel>
             </ScrollViewer>

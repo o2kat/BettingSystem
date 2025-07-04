@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -62,12 +63,15 @@ namespace BettingSystemApp
                 UserBetsDataGrid.ItemsSource = context.UserBets
                     .Include("User")
                     .Include("Bet")
+                    .ToList()
                     .Select(ub => new
                     {
                         ub.UserBetID,
                         User = ub.User.Username,
-                        Match = $"{ub.Bet.Team1} vs {ub.Bet.Team2}",
+                        Match = string.Format("{0} vs {1}", ub.Bet.Team1, ub.Bet.Team2),
                         ub.Amount,
+                        ub.Coefficient,
+                        ub.TeamWin,
                         ub.DatePlaced,
                         ub.Status
                     }).ToList();
@@ -86,7 +90,9 @@ namespace BettingSystemApp
 
                 foreach (var user in users)
                 {
-                    csv.AppendLine($"{user.UserID},{user.Username},{user.Email},{user.PasswordHash},{user.Role?.RoleName},{user.Balance},{user.BetsCount}");
+                    csv.AppendLine(string.Format("{0},{1},{2},{3},{4},{5},{6}", 
+                        user.UserID, user.Username, user.Email, user.PasswordHash, 
+                        user.Role?.RoleName ?? "", user.Balance, user.BetsCount ?? 0));
                 }
 
                 File.WriteAllText("UsersArchive.csv", csv.ToString());
@@ -105,7 +111,10 @@ namespace BettingSystemApp
 
                 foreach (var bet in bets)
                 {
-                    sb.AppendLine($"{bet.BetID},{bet.Team1},{bet.Team2},{bet.MatchTime:yyyy-MM-dd HH:mm},{bet.Sport},{bet.Description},{bet.Team1Win},{bet.Team2Win},{bet.Draw}");
+                    string drawValue = bet.Draw.HasValue ? bet.Draw.Value.ToString() : "";
+                    sb.AppendLine(string.Format("{0},{1},{2},{3},{4},{5},{6},{7},{8}", 
+                        bet.BetID, bet.Team1, bet.Team2, bet.MatchTime.ToString("yyyy-MM-dd HH:mm"), 
+                        bet.Sport, bet.Description, bet.Team1Win, bet.Team2Win, drawValue));
                 }
 
                 File.WriteAllText("BetsArchive.csv", sb.ToString());
@@ -120,11 +129,14 @@ namespace BettingSystemApp
             {
                 var userBets = context.UserBets.Include("User").Include("Bet").ToList();
                 var sb = new StringBuilder();
-                sb.AppendLine("UserBetID,UserID,Username,BetID,Team1,Team2,Amount,DatePlaced,Status");
+                sb.AppendLine("UserBetID,UserID,Username,BetID,Team1,Team2,Amount,Coefficient,TeamWin,DatePlaced,Status");
 
                 foreach (var ub in userBets)
                 {
-                    sb.AppendLine($"{ub.UserBetID},{ub.UserID},{ub.User.Username},{ub.BetID},{ub.Bet.Team1},{ub.Bet.Team2},{ub.Amount},{ub.DatePlaced:yyyy-MM-dd HH:mm},{ub.Status}");
+                    sb.AppendLine(string.Format("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10}", 
+                        ub.UserBetID, ub.UserID, ub.User.Username, ub.BetID, 
+                        ub.Bet.Team1, ub.Bet.Team2, ub.Amount, ub.Coefficient, ub.TeamWin,
+                        ub.DatePlaced.ToString("yyyy-MM-dd HH:mm"), ub.Status));
                 }
 
                 File.WriteAllText("UserBetsArchive.csv", sb.ToString());
@@ -211,17 +223,26 @@ namespace BettingSystemApp
             }
 
             var lines = File.ReadAllLines("BetsArchive.csv").Skip(1);
+            int restoredCount = 0;
+            int totalLines = lines.Count();
+            
             using (var context = new BettingContext())
             {
                 context.Bets.RemoveRange(context.Bets);
                 foreach (var line in lines)
                 {
                     var parts = line.Split(',');
-                    if (parts.Length == 9 && DateTime.TryParse(parts[3], out DateTime parsedDate) &&
+                    if (parts.Length >= 8 && DateTime.TryParse(parts[3], out DateTime parsedDate) &&
                         decimal.TryParse(parts[6], out decimal team1Win) &&
-                        decimal.TryParse(parts[7], out decimal team2Win) &&
-                        decimal.TryParse(parts[8], out decimal draw))
+                        decimal.TryParse(parts[7], out decimal team2Win))
                     {
+                        decimal? drawValue = null;
+                        if (parts.Length > 8 && !string.IsNullOrWhiteSpace(parts[8]) && 
+                            decimal.TryParse(parts[8], out decimal draw))
+                        {
+                            drawValue = draw;
+                        }
+
                         context.Bets.Add(new Bet
                         {
                             Team1 = parts[1],
@@ -231,13 +252,59 @@ namespace BettingSystemApp
                             Description = parts[5],
                             Team1Win = team1Win,
                             Team2Win = team2Win,
-                            Draw = draw
+                            Draw = drawValue
                         });
+                        restoredCount++;
                     }
                 }
                 context.SaveChanges();
                 LoadBets();
             }
+            MessageBox.Show(string.Format("Ставки успешно восстановлены из архива. Обработано {0} строк, восстановлено {1} записей.", totalLines, restoredCount));
+        }
+
+        private void UnarchiveUserBetsButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (!File.Exists("UserBetsArchive.csv"))
+            {
+                MessageBox.Show("Файл архива ставок пользователей не найден.");
+                return;
+            }
+
+            var lines = File.ReadAllLines("UserBetsArchive.csv").Skip(1);
+            int restoredCount = 0;
+            using (var context = new BettingContext())
+            {
+                context.UserBets.RemoveRange(context.UserBets);
+                foreach (var line in lines)
+                {
+                    var parts = line.Split(',');
+                    if (parts.Length == 11 && 
+                        int.TryParse(parts[0], out int userBetId) &&
+                        int.TryParse(parts[1], out int userId) &&
+                        int.TryParse(parts[3], out int betId) &&
+                        decimal.TryParse(parts[6], out decimal amount) &&
+                        decimal.TryParse(parts[7], out decimal coefficient) &&
+                        DateTime.TryParse(parts[9], out DateTime datePlaced))
+                    {
+                        context.UserBets.Add(new UserBet
+                        {
+                            UserBetID = userBetId,
+                            UserID = userId,
+                            BetID = betId,
+                            Amount = amount,
+                            Coefficient = coefficient,
+                            TeamWin = parts[8],
+                            DatePlaced = datePlaced,
+                            Status = parts[10]
+                        });
+                        restoredCount++;
+                    }
+                }
+                context.SaveChanges();
+                LoadUserBets();
+            }
+            MessageBox.Show(string.Format("Ставки пользователей успешно восстановлены из архива. Восстановлено {0} записей.", restoredCount));
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
