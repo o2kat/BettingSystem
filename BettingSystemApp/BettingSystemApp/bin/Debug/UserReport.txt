@@ -3,3 +3,5 @@ ID	Логин	Email	Роль	Дата создания
 1037	Admin	Admin@gmail.com	Admin	2025-05-01
 1038	Director	Director@gmail.com	Director	2025-05-01
 1039	Editor	Editor@gmail.com	Editor	2025-05-01
+1040	test	test@mail.ru	Admin	2025-07-02
+1041	director	director@mail.ru	Director	2025-07-02

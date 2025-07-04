@@ -13,6 +13,7 @@ namespace BettingSystemApp
         {
             InitializeComponent();
             LoadUsers();
+            LoadUserBets();
         }
 
         private void LoadUsers()
@@ -25,7 +26,28 @@ namespace BettingSystemApp
                         u.UserID,
                         u.Username,
                         u.Email,
+                        u.Balance,
+                        u.BetsCount,
                         Role = u.Role.RoleName
+                    }).ToList();
+            }
+        }
+
+        private void LoadUserBets()
+        {
+            using (var context = new BettingContext())
+            {
+                UserBetsDataGrid.ItemsSource = context.UserBets
+                    .Include("User")
+                    .Include("Bet")
+                    .Select(ub => new
+                    {
+                        ub.UserBetID,
+                        User = ub.User.Username,
+                        Match = $"{ub.Bet.Team1} vs {ub.Bet.Team2}",
+                        ub.Amount,
+                        ub.DatePlaced,
+                        ub.Status
                     }).ToList();
             }
         }
@@ -52,13 +74,16 @@ namespace BettingSystemApp
             }
 
             LoadUsers();
+            LoadUserBets();
             MessageBox.Show("Пользователь удалён.");
         }
 
         private void GenerateReport_Click(object sender, RoutedEventArgs e)
         {
             var userReportPath = "UserReport.txt";
-            var eventReportPath = "EventReport.txt";
+            var betReportPath = "BetReport.txt";
+            var userBetReportPath = "UserBetReport.txt";
+            var directorUserReportPath = "DirectorUserReport.csv";
 
             using (var context = new BettingContext())
             {
@@ -66,43 +91,70 @@ namespace BettingSystemApp
                 var users = context.Users.Include("Role").ToList();
                 var userReport = new StringBuilder();
                 userReport.AppendLine("ОТЧЁТ О ПОЛЬЗОВАТЕЛЯХ");
-                userReport.AppendLine("ID\tЛогин\tEmail\tРоль\tДата создания");
+                userReport.AppendLine("ID\tЛогин\tEmail\tРоль\tБаланс\tКоличество ставок\tДата создания");
                 foreach (var user in users)
                 {
-                    userReport.AppendLine($"{user.UserID}\t{user.Username}\t{user.Email}\t{user.Role?.RoleName ?? "Не назначена"}\t{user.CreatedDate:yyyy-MM-dd}");
+                    userReport.AppendLine($"{user.UserID}\t{user.Username}\t{user.Email}\t{user.Role?.RoleName ?? "Не назначена"}\t{user.Balance:F2}\t{user.BetsCount}\t{user.CreatedDate:yyyy-MM-dd}");
                 }
                 File.WriteAllText(userReportPath, userReport.ToString());
 
-                // ---------- События ----------
-                var events = context.Events.ToList();
-                var eventReport = new StringBuilder();
-                eventReport.AppendLine("ОТЧЁТ О СОБЫТИЯХ");
-                eventReport.AppendLine("ID\tНазвание события\tДата");
-                foreach (var ev in events)
+                // ---------- Ставки ----------
+                var bets = context.Bets.ToList();
+                var betReport = new StringBuilder();
+                betReport.AppendLine("ОТЧЁТ О СТАВКАХ");
+                betReport.AppendLine("ID\tКоманда 1\tКоманда 2\tВремя матча\tСпорт\tОписание\tК1\tК2\tКX");
+                foreach (var bet in bets)
                 {
-                    eventReport.AppendLine($"{ev.EventID}\t{ev.EventName}\t{ev.EventDate:yyyy-MM-dd}");
+                    betReport.AppendLine($"{bet.BetID}\t{bet.Team1}\t{bet.Team2}\t{bet.MatchTime:yyyy-MM-dd HH:mm}\t{bet.Sport}\t{bet.Description}\t{bet.Team1Win:F2}\t{bet.Team2Win:F2}\t{bet.Draw:F2}");
                 }
-                File.WriteAllText(eventReportPath, eventReport.ToString());
+                File.WriteAllText(betReportPath, betReport.ToString());
+
+                // ---------- Ставки пользователей ----------
+                var userBets = context.UserBets.Include("User").Include("Bet").ToList();
+                var userBetReport = new StringBuilder();
+                userBetReport.AppendLine("ОТЧЁТ О СТАВКАХ ПОЛЬЗОВАТЕЛЕЙ");
+                userBetReport.AppendLine("ID\tПользователь\tМатч\tСумма\tДата ставки\tСтатус");
+                foreach (var ub in userBets)
+                {
+                    userBetReport.AppendLine($"{ub.UserBetID}\t{ub.User.Username}\t{ub.Bet.Team1} vs {ub.Bet.Team2}\t{ub.Amount:F2}\t{ub.DatePlaced:yyyy-MM-dd HH:mm}\t{ub.Status}");
+                }
+                File.WriteAllText(userBetReportPath, userBetReport.ToString());
+
+                // ---------- CSV отчёт для директора ----------
+                var csvReport = new StringBuilder();
+                csvReport.AppendLine("UserID,Username,Email,Role,Balance,BetsCount,CreatedDate");
+                foreach (var user in users)
+                {
+                    csvReport.AppendLine($"{user.UserID},{user.Username},{user.Email},{user.Role?.RoleName ?? "Не назначена"},{user.Balance:F2},{user.BetsCount},{user.CreatedDate:yyyy-MM-dd}");
+                }
+                File.WriteAllText(directorUserReportPath, csvReport.ToString());
             }
 
-            MessageBox.Show("Отчёты успешно созданы:\n- UserReport.txt\n- EventReport.txt", "Готово", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("Отчёты успешно созданы:\n- UserReport.txt\n- BetReport.txt\n- UserBetReport.txt\n- DirectorUserReport.csv", "Готово", MessageBoxButton.OK, MessageBoxImage.Information);
         }
+
         private void OpenReportsButton_Click(object sender, RoutedEventArgs e)
         {
             try
             {
                 string userReport = "UserReport.txt";
-                string eventReport = "EventReport.txt";
+                string betReport = "BetReport.txt";
+                string userBetReport = "UserBetReport.txt";
 
                 if (File.Exists(userReport))
                     System.Diagnostics.Process.Start("notepad.exe", userReport);
                 else
                     MessageBox.Show("Файл отчёта пользователей не найден.");
 
-                if (File.Exists(eventReport))
-                    System.Diagnostics.Process.Start("notepad.exe", eventReport);
+                if (File.Exists(betReport))
+                    System.Diagnostics.Process.Start("notepad.exe", betReport);
                 else
-                    MessageBox.Show("Файл отчёта событий не найден.");
+                    MessageBox.Show("Файл отчёта ставок не найден.");
+
+                if (File.Exists(userBetReport))
+                    System.Diagnostics.Process.Start("notepad.exe", userBetReport);
+                else
+                    MessageBox.Show("Файл отчёта ставок пользователей не найден.");
             }
             catch (Exception ex)
             {

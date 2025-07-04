@@ -8,93 +8,126 @@ namespace BettingSystemApp
 {
     public partial class EditorWindow : Window
     {
-        private Timer _clearOldEventsTimer;
+        private Timer _clearOldBetsTimer;
 
         public EditorWindow()
         {
             InitializeComponent();
-            LoadEvents();
-            SetupClearOldEventsTimer();
+            LoadBets();
+            SetupClearOldBetsTimer();
         }
 
-        private void LoadEvents()
+        private void LoadBets()
         {
             using (var context = new BettingContext())
             {
-                EventsListView.ItemsSource = context.Events.ToList();
+                BetsListView.ItemsSource = context.Bets
+                    .Select(b => new
+                    {
+                        b.BetID,
+                        Match = $"{b.Team1} vs {b.Team2}",
+                        b.MatchTime,
+                        b.Sport,
+                        b.Description,
+                        Team1Win = $"{b.Team1Win:F2}",
+                        Team2Win = $"{b.Team2Win:F2}",
+                        Draw = $"{b.Draw:F2}"
+                    }).ToList();
             }
         }
 
-        private void AddEventButton_Click(object sender, RoutedEventArgs e)
+        private void AddBetButton_Click(object sender, RoutedEventArgs e)
         {
-            var addEventWindow = new AddEventWindow();
-            addEventWindow.ShowDialog();
-            LoadEvents();
+            var addBetWindow = new AddBetWindow();
+            addBetWindow.ShowDialog();
+            LoadBets();
         }
 
-        private void EditEventButton_Click(object sender, RoutedEventArgs e)
+        private void EditBetButton_Click(object sender, RoutedEventArgs e)
         {
-            if (EventsListView.SelectedItem is Event selectedEvent)
+            if (BetsListView.SelectedItem != null)
             {
-                var editWindow = new EditEventWindow(selectedEvent);
-                editWindow.ShowDialog();
-                LoadEvents();
-            }
-            else
-            {
-                MessageBox.Show("Выберите событие для редактирования.");
-            }
-        }
-
-        private void DeleteEventButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (EventsListView.SelectedItem is Event selectedEvent)
-            {
-                using (var context = new BettingContext())
+                var selectedItem = BetsListView.SelectedItem;
+                var betIdProperty = selectedItem.GetType().GetProperty("BetID");
+                if (betIdProperty != null)
                 {
-                    context.Events.Attach(selectedEvent);
-                    context.Events.Remove(selectedEvent);
-                    context.SaveChanges();
+                    int betId = (int)betIdProperty.GetValue(selectedItem);
+                    using (var context = new BettingContext())
+                    {
+                        var bet = context.Bets.FirstOrDefault(b => b.BetID == betId);
+                        if (bet != null)
+                        {
+                            var editWindow = new EditBetWindow(bet);
+                            editWindow.ShowDialog();
+                            LoadBets();
+                        }
+                    }
                 }
-                LoadEvents();
             }
             else
             {
-                MessageBox.Show("Выберите событие для удаления.");
+                MessageBox.Show("Выберите ставку для редактирования.");
             }
         }
 
-        private void ClearPastEvents_Click(object sender, RoutedEventArgs e)
+        private void DeleteBetButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (BetsListView.SelectedItem != null)
+            {
+                var selectedItem = BetsListView.SelectedItem;
+                var betIdProperty = selectedItem.GetType().GetProperty("BetID");
+                if (betIdProperty != null)
+                {
+                    int betId = (int)betIdProperty.GetValue(selectedItem);
+                    using (var context = new BettingContext())
+                    {
+                        var bet = context.Bets.FirstOrDefault(b => b.BetID == betId);
+                        if (bet != null)
+                        {
+                            context.Bets.Remove(bet);
+                            context.SaveChanges();
+                        }
+                    }
+                    LoadBets();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Выберите ставку для удаления.");
+            }
+        }
+
+        private void ClearPastBets_Click(object sender, RoutedEventArgs e)
         {
             using (var context = new BettingContext())
             {
-                var oldEvents = context.Events.Where(ev => ev.EventDate < DateTime.Today).ToList();
-                context.Events.RemoveRange(oldEvents);
+                var oldBets = context.Bets.Where(b => b.MatchTime < DateTime.Now).ToList();
+                context.Bets.RemoveRange(oldBets);
                 context.SaveChanges();
             }
 
-            MessageBox.Show("Прошедшие события удалены.");
-            LoadEvents();
+            MessageBox.Show("Прошедшие ставки удалены.");
+            LoadBets();
         }
 
-        private void SetupClearOldEventsTimer()
+        private void SetupClearOldBetsTimer()
         {
-            _clearOldEventsTimer = new Timer(86400000); // 24 часа
-            _clearOldEventsTimer.Elapsed += (s, e) => ClearPastEventsAuto();
-            _clearOldEventsTimer.Start();
+            _clearOldBetsTimer = new Timer(86400000); // 24 часа
+            _clearOldBetsTimer.Elapsed += (s, e) => ClearPastBetsAuto();
+            _clearOldBetsTimer.Start();
         }
 
-        private void ClearPastEventsAuto()
+        private void ClearPastBetsAuto()
         {
             Application.Current.Dispatcher.Invoke(() =>
             {
                 using (var context = new BettingContext())
                 {
-                    var oldEvents = context.Events.Where(e => e.EventDate < DateTime.Today).ToList();
-                    context.Events.RemoveRange(oldEvents);
+                    var oldBets = context.Bets.Where(b => b.MatchTime < DateTime.Now).ToList();
+                    context.Bets.RemoveRange(oldBets);
                     context.SaveChanges();
                 }
-                LoadEvents();
+                LoadBets();
             });
         }
 
