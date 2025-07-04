@@ -17,4 +17,4 @@ namespace BettingSystemApp.Models
 
         public virtual ICollection<UserBet> UserBets { get; set; }
     }
-} 
+}
